@@ -73,7 +73,6 @@ function changeDelimiter(){
 	
 //Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
 //#6//
-
 function decPlaces(){
 	var text = prompt("please enter a number in the space below.","") 
 	var num = parseFloat(text, 10);
@@ -81,6 +80,51 @@ function decPlaces(){
 	alert("Number '" + text + "' is now: " + decNum);
 	
 	}
+	
+//Fuzzy-match a number: is the number above or below a number within a certain percent?
+//#7//
+function fuzzyMatch(){
+	    var text = prompt("Please type in a number at that is within 20% of 100.", "80");	
+    var num = parseInt(text, 10);
+	var percNum = 100 * 0.2;
+
+	//alert(percNum);
+    if(num > 100 & num >100+percNum)
+    {
+    alert("You are too far above 100");
+    }
+    else if(num < 100 & num <100-percNum)
+    {
+    alert("You are too far below 100");
+    }
+    else
+    {
+    alert("You are within range");
+    }
+
+	}
+	
+//Find the number of hours or days difference between two dates.
+//#8//
+function dateDifference(){
+	var Date0 = new Date(2000, 1, 14);
+    var Date1 = new Date(2014, 9, 25);
+    var day = 1000*60*60*24; 
+    //var days;
+    //var hours;
+    var date0ms = Date0.getTime();
+    alert(date0ms);
+    var date1ms = Date1.getTime();
+    alert(date1ms);
+
+    var differenceInMs = date1ms - date0ms;
+    var days = Math.round(differenceInMs/day);
+    alert(days);
+    var hours = days*42;
+    alert("There are " + days + " days, or " + hours + " hours between the dates listed.");
+	
+	}	
+	
 //Given a string version of a number such as "42", return the value as an actual Number, such as 42. 
 //#9//
 function stringNumToIntNum() {
