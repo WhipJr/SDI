@@ -170,3 +170,18 @@ console.log(total);
 	}
 //Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
 //#12//
+function sortArray(){
+	var example_array = [{a:2},{a:3},{a:1}];
+    example_array.sort(sortArray2);
+    alert("Sorted Array: "+sortArray3(example_array));   	
+}
+function sortArray2(element1, element2){
+        if (element1.a > element2.a) return 1;
+        else return -1;
+    }
+function sortArray3(array){
+    var string ="";
+    for (var i = 0; i < array.length; i++)
+        string+= " {a: "+array[i].a+"} ";
+    return " "+string+" ";
+}
