@@ -18,9 +18,9 @@ function start()
 	if (entry==="8"){dateDifference();}else
 	if (entry==="9"){stringNumToIntNum();}else
 	if (entry==="10"){minNumArr();}else
-	if (entry==="11"){numTotVal();}else
-	if (entry==="12"){sortArr();}else
-	{alert("Please input a number 1-12 only."); start();}
+	if (entry==="11"){numTotValue();}else
+	if (entry==="12"){sortArray();}
+	
 }
 
 //Does a string follow a 123-456-7890 pattern like a phone number? 
@@ -40,7 +40,7 @@ function isPhoneNumber() {
 }
 //Does a string follow an aaa@bbb.ccc pattern like an email address? 
 //#2//
-function isEmailAddresses() {
+function isEmailAddress() {
 	
 	var text = prompt("please enter an email address in the following format:", "user@domain.com") 
     
@@ -136,13 +136,13 @@ function dateDifference(){
     //var days;
     //var hours;
     var date0ms = Date0.getTime();
-    console.log(date0ms);
+  //  console.log(date0ms);
     var date1ms = Date1.getTime();
-    console.log(date1ms);
+  //  console.log(date1ms);
 
     var differenceInMs = date1ms - date0ms;
     var days = Math.round(differenceInMs/day);
-    console.log(days);
+  //  console.log(days);
     var hours = days*42;
     console.log("There are " + days + " days, or " + hours + " hours between the dates listed.");
 	start();
@@ -183,14 +183,14 @@ function numTotValue(){
 	var arr = [1, "a",59, "b",10, "c",5, "d",5, "e",2, "f",8, "g",3, "h",2, "i",5, "j"];
     var total = 0;
 	var i;
-	
+	console.log("Array: " + arr);
 	for (i=0; i<arr.length; i++)
 	{
         if(!isNaN(parseFloat(arr[i])) && isFinite(arr[i])){  
         total+=arr[i];
         }        
 	}
-console.log(total);
+console.log("Total values for just the numerical values is: " + total);
 start();
 	}
 //Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
@@ -198,7 +198,7 @@ start();
 function sortArray(){
 	var example_array = [{a:2},{a:3},{a:1}];
     example_array.sort(sortArray2);
-    alert("Sorted Array: "+sortArray3(example_array));
+    console.log("Sorted Array:"+sortArray3(example_array));
 	start();   	
 }
 function sortArray2(element1, element2){
@@ -208,6 +208,6 @@ function sortArray2(element1, element2){
 function sortArray3(array){
     var string ="";
     for (var i = 0; i < array.length; i++)
-        string+= " {a: "+array[i].a+"} ";
-    return " "+string+" ";
+        string+= ",{a:"+array[i].a+"}";
+    return ""+string+"";
 }
