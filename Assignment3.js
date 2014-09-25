@@ -1,18 +1,13 @@
-//Global Variables
-var userName;
+//I would like to use this towards any applicable extra credit.
+/*
 
+Christian Swinford
 
-//Start
+*/
 
-console.log("Hello, you may begin by typing your name.");
-
-//prompt for the user's name.
-userName = prompt("What is your name?", "Please input your name.");
-
-console.log(verifyName(userName));
-
+//Does a string follow a 123-456-7890 pattern like a phone number? //#1//
 function isPhoneNumber() {
-    text = prompt("please enter a phone number in the following format:", "xxx-xxx-xxxx") 
+    var text = prompt("please enter a phone number in the following format:", "xxx-xxx-xxxx") 
     
    if(/^[2-9]\d{2}-\d{3}-\d{4}$/.test(text))
 	   {
@@ -23,10 +18,10 @@ function isPhoneNumber() {
 	   console.log("This is not the correct format.")
 	   }
 }
-
+//Does a string follow an aaa@bbb.ccc pattern like an email address? //#2//
 function isEmailAddresses() {
 	
-	text = prompt("please enter an email address in the following format:", "user@domain.com") 
+	var text = prompt("please enter an email address in the following format:", "user@domain.com") 
     
 	   if(/^[^@]+@[^@]+\..{2,6}$/.test(text))
 		   {
@@ -37,12 +32,12 @@ function isEmailAddresses() {
 		   console.log("This is not the correct format.")
 		   }
 }
-
+//Is the string a URL? (Does it start with http: or https:?) //#3//
 function findEmailAddresses() {
 	
-	text = prompt("please enter a URL in the space below.","") 
+	var text = prompt("please enter a URL in the space below.","") 
     
-	   if(/^(?:(ftp|http|https):\/\/)?(?:[\w\-]+\.)+[a-z]{2,6}([\:\/?#].*)?$/i.test(text))
+	   if(/^(?:(http|https):\/\/)?(?:[\w\-]+\.)+[a-z]{2,6}([\:\/?#].*)?$/i.test(text))
 		   {
 		   console.log("This is a valid URL.");
 		   }
@@ -50,4 +45,13 @@ function findEmailAddresses() {
 		   {
 		   console.log("This is not a valid URL.")
 		   }
+}
+
+function stringNumToIntNum() {
+	
+	var text = prompt("please enter a number in the space below.","") 
+	var num = parseInt(text, 10);
+	alert("Text '" + text + "' is now: " + num);
+    
+	   
 }
