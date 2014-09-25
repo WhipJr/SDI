@@ -4,6 +4,24 @@
 Christian Swinford
 
 */
+start();
+function start()
+{
+	entry = prompt("Please input a number from 1-12");
+	if (entry==="1"){isPhoneNumber();}else
+	if (entry==="2"){isEmailAddress();}else
+	if (entry==="3"){isUrlAddress();}else
+	if (entry==="4"){firstWordCap();}else
+	if (entry==="5"){changeDelimiter();}else
+	if (entry==="6"){decPlaces();}else
+	if (entry==="7"){fuzzyMatch();}else
+	if (entry==="8"){dateDifference();}else
+	if (entry==="9"){stringNumToIntNum();}else
+	if (entry==="10"){minNumArr();}else
+	if (entry==="11"){numTotVal();}else
+	if (entry==="12"){sortArr();}else
+	{alert("Please input a number 1-12 only."); start();}
+}
 
 //Does a string follow a 123-456-7890 pattern like a phone number? 
 //#1//
@@ -18,6 +36,7 @@ function isPhoneNumber() {
 	   {
 	   console.log("This is not the correct format.")
 	   }
+	   start();
 }
 //Does a string follow an aaa@bbb.ccc pattern like an email address? 
 //#2//
@@ -33,10 +52,11 @@ function isEmailAddresses() {
 		   {
 		   console.log("This is not the correct format.")
 		   }
+		   start();
 }
 //Is the string a URL? (Does it start with http: or https:?) 
 //#3//
-function findEmailAddresses() {
+function isUrlAddress() {
 	
 	var text = prompt("please enter a URL in the space below.","") 
     
@@ -48,6 +68,7 @@ function findEmailAddresses() {
 		   {
 		   console.log("This is not a valid URL.")
 		   }
+		   start();
 }
 
 //Title-case a string (split into words, then uppercase the first letter of each word) 
@@ -58,6 +79,7 @@ function firstWordCap(){
 	var newStr = str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 	
 	console.log(newStr);
+	start();
 	}
 
 //Given a string that is a list of things separated by a given string,
@@ -69,6 +91,7 @@ function changeDelimiter(){
 	var newStr = str.replace(/,/g, "/");
 	
 	console.log(newStr);
+	start();
 	}
 	
 //Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
@@ -78,7 +101,7 @@ function decPlaces(){
 	var num = parseFloat(text, 10);
 	var decNum = parseFloat(Math.round(num * 100) / 100).toFixed(2);
 	console.log("Number '" + text + "' is now: " + decNum);
-	
+	start();
 	}
 	
 //Fuzzy-match a number: is the number above or below a number within a certain percent?
@@ -101,7 +124,7 @@ function fuzzyMatch(){
     {
     console.log("You are within range");
     }
-
+	start();
 	}
 	
 //Find the number of hours or days difference between two dates.
@@ -122,7 +145,7 @@ function dateDifference(){
     console.log(days);
     var hours = days*42;
     console.log("There are " + days + " days, or " + hours + " hours between the dates listed.");
-	
+	start();
 	}	
 	
 //Given a string version of a number such as "42", return the value as an actual Number, such as 42. 
@@ -133,7 +156,7 @@ function stringNumToIntNum() {
 	var num = parseInt(text, 10);
 	console.log("Text '" + text + "' is now: " + num);
     
-	   
+	start(); 
 }
 //Find the smallest value in an array that is greater than a given number.
 //#10//
@@ -151,6 +174,7 @@ function minNumArr(){
     	}
 	}
 	console.log(minNum);
+	start();
 }
 //Find the total value of just the numbers in an array, even if some of the items are not numbers.
 //#11//
@@ -167,13 +191,15 @@ function numTotValue(){
         }        
 	}
 console.log(total);
+start();
 	}
 //Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
 //#12//
 function sortArray(){
 	var example_array = [{a:2},{a:3},{a:1}];
     example_array.sort(sortArray2);
-    alert("Sorted Array: "+sortArray3(example_array));   	
+    alert("Sorted Array: "+sortArray3(example_array));
+	start();   	
 }
 function sortArray2(element1, element2){
         if (element1.a > element2.a) return 1;
