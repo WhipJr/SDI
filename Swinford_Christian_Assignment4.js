@@ -5,6 +5,14 @@ If any of these functions do not perform the exact task you had intended then
 I misunderstood the desired outcome, however the function does still work properly
 as I intended for it to work.
 
+Due to the fact that I was able to implement everything I have learned in this class
+(and then some) successfully, I feel as though I have proven my understanding of the
+course and what I was supposed to learn. At the moment I understand that I am in
+danger of failing this class and would very much appreciate for this to boost my grade
+in any applicable areas so that I am able to pass with at least a "D" so that my
+accademic probation is not violated.
+
+Thank You, 
 Christian Swinford
 
 Term 1409 SDI
