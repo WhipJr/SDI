@@ -77,7 +77,7 @@ function decPlaces(){
 	var text = prompt("please enter a number in the space below.","") 
 	var num = parseFloat(text, 10);
 	var decNum = parseFloat(Math.round(num * 100) / 100).toFixed(2);
-	alert("Number '" + text + "' is now: " + decNum);
+	console.log("Number '" + text + "' is now: " + decNum);
 	
 	}
 	
@@ -88,18 +88,18 @@ function fuzzyMatch(){
     var num = parseInt(text, 10);
 	var percNum = 100 * 0.2;
 
-	//alert(percNum);
+	//console.log(percNum);
     if(num > 100 & num >100+percNum)
     {
-    alert("You are too far above 100");
+    console.log("You are too far above 100");
     }
     else if(num < 100 & num <100-percNum)
     {
-    alert("You are too far below 100");
+    console.log("You are too far below 100");
     }
     else
     {
-    alert("You are within range");
+    console.log("You are within range");
     }
 
 	}
@@ -113,15 +113,15 @@ function dateDifference(){
     //var days;
     //var hours;
     var date0ms = Date0.getTime();
-    alert(date0ms);
+    console.log(date0ms);
     var date1ms = Date1.getTime();
-    alert(date1ms);
+    console.log(date1ms);
 
     var differenceInMs = date1ms - date0ms;
     var days = Math.round(differenceInMs/day);
-    alert(days);
+    console.log(days);
     var hours = days*42;
-    alert("There are " + days + " days, or " + hours + " hours between the dates listed.");
+    console.log("There are " + days + " days, or " + hours + " hours between the dates listed.");
 	
 	}	
 	
@@ -131,7 +131,23 @@ function stringNumToIntNum() {
 	
 	var text = prompt("please enter a number in the space below.","") 
 	var num = parseInt(text, 10);
-	alert("Text '" + text + "' is now: " + num);
+	console.log("Text '" + text + "' is now: " + num);
     
 	   
+}
+
+function minNumArr(){
+	var min = 85;
+	var arr = [89, 34, 20, 15, 25, 86];
+	var minNum;
+	var i;
+	for(i=0; i<arr.length; i++){
+    	if(i===0){
+   		minNum = arr[0];
+   		}
+    	if(arr[i]>min&&arr[i]<minNum){
+   		minNum = arr[i];
+    	}
+	}
+	console.log(minNum);
 }
