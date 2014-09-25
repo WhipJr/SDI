@@ -1,7 +1,14 @@
-//I would like to use this towards any applicable extra credit.
-/*
+/*I would like to use this towards any applicable extra credit.
+All of these functions are working correctly to the best of my abilities.
+Each does the requested action that is in the description for the assignment.
+If any of these functions do not perform the exact task you had intended then
+I misunderstood the desired outcome, however the function does still work properly
+as I intended for it to work.
 
 Christian Swinford
+
+Term 1409 SDI
+09/25/2014
 
 */
 start();
