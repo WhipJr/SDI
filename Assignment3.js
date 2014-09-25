@@ -135,7 +135,8 @@ function stringNumToIntNum() {
     
 	   
 }
-
+//Find the smallest value in an array that is greater than a given number.
+//#10//
 function minNumArr(){
 	var min = 85;
 	var arr = [89, 34, 20, 15, 25, 86];
@@ -151,3 +152,21 @@ function minNumArr(){
 	}
 	console.log(minNum);
 }
+//Find the total value of just the numbers in an array, even if some of the items are not numbers.
+//#11//
+function numTotValue(){
+	
+	var arr = [1, "a",59, "b",10, "c",5, "d",5, "e",2, "f",8, "g",3, "h",2, "i",5, "j"];
+    var total = 0;
+	var i;
+	
+	for (i=0; i<arr.length; i++)
+	{
+        if(!isNaN(parseFloat(arr[i])) && isFinite(arr[i])){  
+        total+=arr[i];
+        }        
+	}
+console.log(total);
+	}
+//Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
+//#12//
